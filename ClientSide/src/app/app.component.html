@@ -1,0 +1,70 @@
+<div class="col-md-8 form-style" style="margin-top: 2%;">
+  <h1 style="margin-left: 56%;">Cadastrar Usuario</h1>
+  <hr>
+  <form>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Escreva seu Nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sobrenome">Sobrenome</label>
+      <input type="text" class="form-control" id="sobrenome" placeholder="Escreva seu Sobrenome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="exemplo@exemplo.com" required>
+    </div>
+    
+    <label for="dateofbirth">Data de Nascimento</label>
+    <input class="form-control" type="date" name="datanasc" id="datanasc" required>
+
+    <div class="form-group">
+      <label>Escolaridade</label>
+      <select class="form-control form-control-sm" required>
+        <option style="color: grey">Escolha</option>
+        <option>Infantil</option>
+        <option>Médio</option>
+        <option>Médio</option>
+        <option>Superior</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-left: 70%;">Salvar</button>
+  </form>
+  <hr>
+</div>
+
+<div class="col-md-8" style="margin-left: 13%;">
+  <h1 style="margin-top:5%; margin-bottom: 5%; margin-left: 33%;">Listagem de Usuários</h1>
+  <hr class="hr-edit">
+  <div class="row">
+    <div class="col-md-1"><span>Nome</span>
+      <p>Diego</p>
+    </div>
+    <div class="col-md-2"><span>Sobrenome</span>
+      <p>Silva</p>
+    </div>
+    <div class="col-md-3"><span>Email</span> 
+      <p>Fulano@Fulano.com</p>
+    </div>
+    <div class="col-md-2"><span>DtNascimento</span> 
+      <p>01/01/0001</p>
+    </div>
+    <div class="col-md-2"><span>Escolaridade</span> 
+      <p>Superior</p>
+    </div>
+    <div class="col-md-1">
+      <a href="#" class="btn btn-info btn-sm">
+        <span class="glyphicon glyphicon-edit"></span> Editar
+      </a>
+    </div>
+    <div class="col-md-1">
+      <a href="#" class="btn btn-danger btn-sm">
+        <span class="glyphicon glyphicon-floppy-remove"></span> Remover
+      </a>
+    </div>
+  </div>
+  <hr class="hr-edit">
+</div>
+
