@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ErrorHandler } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
@@ -19,29 +19,19 @@ export class CadastroUsuarioesService {
 
   getUsuarioCadastro(): Observable<CadastroUsuarioes[]>{
     return this.httpClient.get<CadastroUsuarioes[]>(this.url)
-    .pipe(
-      retry(2))
   }
 
   saveUsuarioCadastro(usuarioCadastro: CadastroUsuarioes): Observable<CadastroUsuarioes> {
     return this.httpClient.post<CadastroUsuarioes>(this.url, JSON.stringify(usuarioCadastro), this.httpOptions)
-      .pipe(
-        retry(2)
-      )
   }
 
   updateUsuarioCadastro(usuarioCadastro: CadastroUsuarioes): Observable<CadastroUsuarioes> {
     return this.httpClient.put<CadastroUsuarioes>(this.url + '/' + usuarioCadastro.Id, JSON.stringify(usuarioCadastro), this.httpOptions)
-      .pipe(
-        retry(1)
-      )
   }
 
   deleteUsuarioCadastro(usuarioCadastro: CadastroUsuarioes) {
+    console.log(usuarioCadastro)
     return this.httpClient.delete<CadastroUsuarioes>(this.url + '/' + usuarioCadastro.Id, this.httpOptions)
-      .pipe(
-        retry(1)
-      )
   }
 
   handleError(error: HttpErrorResponse) {

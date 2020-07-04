@@ -1,8 +1,17 @@
 export interface CadastroUsuarioes {
     Id: number;
     Nome: string;
-    Sobrenome: string;
+    SobreNome: string;
     Email: string;
-    DataNascimento: Date;
-    Escolaridade: number;
+    DataNascimento: Date | string;
+    Escolaridade: number | string;
 }
+
+export enum Escolaridade {
+    Infantil = 1,
+    Fundamental = 2,
+    Médio =3,
+    Superior = 4
+}
+
+
